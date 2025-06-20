@@ -1,0 +1,17 @@
+version 1.0
+@totalColumns 7
+@quoted true /* This directive specifies that all fields in the CSV data are quoted. */
+
+/*
+This schema defines the structure for a CSV file containing user stories,
+including their identifiers, full story text, and associated numeric metrics
+for benefit, penalty, effort, and risk.
+*/
+
+STORY-ID: regex("STORY-\\d{3}")
+FEATURE-ID: regex("FEATURE-\\d{3}")
+STORY: notEmpty
+BENEFIT: positiveInteger
+PENALTY: positiveInteger
+EFFORT: positiveInteger
+RISK: positiveInteger
